@@ -50,6 +50,10 @@ def check_victory(str):
         return True
     if str == "--HTHTHTHTHT":
         return True
+    if str == "THTHTHTHTH--":
+        return True
+    if str == "--THTHTHTHTH":
+        return True
     return False
 
 def main():
@@ -66,6 +70,7 @@ def main():
                 print("You lose !")
                 return
         if check_victory(str):
+            print(str)
             print("You win !")
             return
         pos = input_usr(str)
